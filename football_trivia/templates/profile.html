@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Your Past Scores</h2>
+<ul>
+    {% for score in scores %}
+        <li>{{ score.date_taken|date:"Y-m-d H:i" }} - Score: {{ score.score }}</li>
+    {% empty %}
+        <li>No quiz attempts yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

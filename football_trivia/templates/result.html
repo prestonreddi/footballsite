@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
+<p>Your Score: {{ score }} / {{ total }}</p>
+<a href="{% url 'quiz' %}">Try Again</a>
+{% endblock %}
